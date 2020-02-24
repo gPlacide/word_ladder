@@ -26,12 +26,12 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
         for i in range(len(data)):
             dictionary_w = data[i]
             #print(dictionary_w)
-           # print(_adjacent1(word, dictionary_w))
-            #print(_adjacent1(word,dictionary_w))
+           # print(_adjacent(word, dictionary_w))
+            #print(_adjacent(word,dictionary_w))
             #print(:'+dictionary_w)
             #if('abler'==dictionary_w):
                # print("aaaaaaaaaaaaaaaaaaaaa")
-            if _adjacent1(word, dictionary_w):
+            if _adjacent(word, dictionary_w):
                 if dictionary_w == (end_word):
                     word_a.append(dictionary_w)
                     return word_a
