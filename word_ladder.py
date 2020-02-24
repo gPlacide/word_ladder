@@ -17,7 +17,7 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
      #   data = f.readlines()
     #print("data" ,data)
     words_s = []
-    words_s.append('start_word')
+    words_s.append(start_word)
     words_d = deque()
     words_d.appendleft(words_s)
 
