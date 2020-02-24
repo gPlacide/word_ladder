@@ -24,8 +24,9 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
     while not len(words_d)==0:
         word_a = words_d.pop()
         word = word_a[len(word_a)-1]
-        for i in range(len(data)):
-            dictionary_w = data[i]
+        data_copy = copy(data)
+        for i in range(len(data_copy)):
+            dictionary_w = data_copy[i]
             #print(dictionary_w)
            # print(_adjacent(word, dictionary_w))
             #print(_adjacent(word,dictionary_w))
@@ -37,7 +38,7 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
                     word_a.append(dictionary_w)
                     return word_a
 
-                stack_n = copy.deepcopy(word_a)
+                stack_n = deepcopy(word_a)
                 stack_n.append(dictionary_w)
                 words_d.appendleft(stack_n)
                 data.remove(dictionary_w)
