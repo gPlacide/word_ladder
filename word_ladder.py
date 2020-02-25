@@ -13,9 +13,7 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
     '''
     data_1 = open(dictionary_file)
     data = data_1.read().split("\n")
-    #with open (dictionary_file) as f:
-     #   data = f.readlines()
-    #print("data" ,data)
+
     words_s = []
     words_s.append(start_word)
     words_d = deque()
@@ -27,12 +25,7 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
         data_copy = copy(data)
         for i in range(len(data_copy)):
             dictionary_w = data_copy[i]
-            #print(dictionary_w)
-           # print(_adjacent(word, dictionary_w))
-            #print(_adjacent(word,dictionary_w))
-            #print(:'+dictionary_w)
-            #if('abler'==dictionary_w):
-               # print("aaaaaaaaaaaaaaaaaaaaa")
+            
             if _adjacent(word, dictionary_w):
                 if dictionary_w == (end_word):
                     word_a.append(dictionary_w)
