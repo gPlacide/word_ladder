@@ -20,7 +20,9 @@ def word_ladder(start_word, end_word, dictionary_file='words5.dict'):
     words_s.append(start_word)
     words_d = deque()
     words_d.appendleft(words_s)
-
+    
+    if start_word == end_word:
+        return words_s
     while not len(words_d)==0:
         word_a = words_d.pop()
         word = word_a[len(word_a)-1]
